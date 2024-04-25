@@ -1,7 +1,5 @@
-# application.yml
-
 server:
-  port: 8080 # or your preferred port
+  port: 8080 
 
 spring:
   application:
@@ -9,7 +7,5 @@ spring:
 
 eureka:
   client:
-    healthcheck:
-      enabled: true
     register-with-eureka: false
     fetch-registry: false

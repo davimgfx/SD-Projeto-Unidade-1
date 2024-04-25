@@ -2,14 +2,44 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Spring Boot-DnsServerAppMainApplication<dns-server-app-main>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.example.dnsserverappmain.DnsServerAppMainApplication",
+      "projectName": "dns-server-app-main",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=42377 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=dns-server-app-main"
+    },
+    {
+      "type": "java",
       "name": "Spring Boot-EurekaServerAppMainApplication<eureka-server-app-main>",
       "request": "launch",
       "cwd": "${workspaceFolder}",
       "mainClass": "com.example.eurekaserverappmain.EurekaServerAppMainApplication",
       "projectName": "eureka-server-app-main",
       "args": "",
-      "envFile": "${workspaceFolder}/.env",
-      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=38689 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=eureka-server-app-main"
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-IspServerAppApplication<isp-server-app>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.example.ispserverapp.IspServerAppApplication",
+      "projectName": "isp-server-app",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-AplicacaoBPerfilAppApplication<aplicacao-b-perfil-app>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.example.aplicacaobperfilapp.AplicacaoBPerfilAppApplication",
+      "projectName": "aplicacao-b-perfil-app",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
     },
     {
       "type": "java",

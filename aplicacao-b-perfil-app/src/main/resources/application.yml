@@ -1,13 +1,15 @@
+
 server:
-  port: 8182
+  port: 8181
+
 
 spring:
   application:
-    name: validacao-app
+    name: perfil-app
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
   instance:
-    preferIpAddress: true 
+    preferIpAddress: true # Optional, for preferring IP address in registration
