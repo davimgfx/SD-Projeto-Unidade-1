@@ -25,6 +25,36 @@ Davi Fernandes Neves Costa
 
 - Com todos os arquivos rodando, é possível testar ele!!!
 
+## Como testar o Projeto
+- Todas as solicitações seram feitas através do isp, que esta na porta 8080
+- Para testar validação, terá que usar a porta http://localhost:8080/validate
+- Para testar os perfis, terá que usar a porta http://localhost:8080/profile
+- Todos emails válidos
+```
+  public PerfilController() {
+        perfis.put("sampio@gmail.com", "Aluno");
+        perfis.put("exemplo@hotmail.com", "Professor");
+        perfis.put("usuario123@yahoo.com", "Funcionário");
+        perfis.put("jose@email.com", "Aluno");
+        perfis.put("ronaldo@ucsal.edu.br", "Professor");
+    }
+```
+- Todos perfis válidos
+```
+    public ValidationController() {
+        emailList.add("sampio@gmail.com");
+        emailList.add("exemplo@hotmail.com");
+        emailList.add("usuario123@yahoo.com");
+        emailList.add("jose@email.com");
+        emailList.add("ronaldo@ucsal.edu.br");
+    }
+```
+  
+![Screenshot from 2024-04-26 11-30-27](https://github.com/davimgfx/SD-Projeto-Unidade-1/assets/118557337/b45a4d71-8076-457b-99bc-5d242af56179)
+
+![Screenshot from 2024-04-26 11-31-36](https://github.com/davimgfx/SD-Projeto-Unidade-1/assets/118557337/27e35221-c3f8-47bf-aaf6-70b665559e2f)
+
+![Screenshot from 2024-04-26 11-33-03](https://github.com/davimgfx/SD-Projeto-Unidade-1/assets/118557337/e57abfbd-6027-42f7-b037-1d24400ba236)
 
 
 ## Orientações
