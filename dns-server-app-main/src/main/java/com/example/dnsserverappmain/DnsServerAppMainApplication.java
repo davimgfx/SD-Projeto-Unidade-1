@@ -11,5 +11,4 @@ public class DnsServerAppMainApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DnsServerAppMainApplication.class, args);
 	}
-
 }

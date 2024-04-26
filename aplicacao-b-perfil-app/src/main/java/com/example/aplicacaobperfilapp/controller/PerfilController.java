@@ -20,10 +20,17 @@ public class PerfilController {
         perfis.put("ronaldo@ucsal.edu.br", "Professor");
     }
 
-    @PostMapping("/perfil")
-    public String obterPerfil(@RequestBody Map<String, String> requestBody) {
-        String email = requestBody.get("email");
-        String perfil = perfis.getOrDefault(email, "Usuário não tem perfil");
-        return "Perfil do usuário: " + perfil;
+      @PostMapping("/perfil")
+        public String obterPerfil(@RequestBody Map<String, String> requestBody) {
+        try {
+            String email = requestBody.get("email");
+            String perfil = perfis.getOrDefault(email, "Usuário não tem perfil");
+            return "Perfil do usuário: " + perfil;
+        } catch (Exception e) {
+            // Log the exception for further investigation
+            e.printStackTrace();
+            // Return a meaningful error message to the client
+            return "Erro ao obter o perfil do usuário: " + e.getMessage();
+        }
     }
 }

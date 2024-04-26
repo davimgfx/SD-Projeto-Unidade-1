@@ -3,6 +3,8 @@ package com.example.aplicacaoavalidacaoapp.controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+
 import java.util.Map;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,12 +23,18 @@ public class ValidationController {
 
     @PostMapping("/validate")
     public String validateEmail(@RequestBody Map<String, String> requestBody) {
-        String email = requestBody.get("email");
-        if (emailList.contains(email)) {
-            return "E-mail válido: " + email;
-        } else {
-            return "E-mail não encontrado na lista";
+        try {
+            String email = requestBody.get("email");
+            if (emailList.contains(email)) {
+                return "E-mail válido: " + email;
+            } else {
+                return "E-mail não encontrado na lista";
+            }
+        } catch (Exception e) {
+            // Log the exception for further investigation
+            e.printStackTrace();
+            // Return a meaningful error message to the client
+            return "Erro ao validar o e-mail: " + e.getMessage();
         }
     }
 }
-
