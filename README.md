@@ -3,6 +3,30 @@
 ## Aluno
 Davi Fernandes Neves Costa
 
+## Como rodar o projeto
+- Baixa a extensão **Spring Boot Dashboard** no VsCode
+- Rode primeiro o **eureka-server-app-main**
+
+![Screenshot from 2024-04-26 10-57-25](https://github.com/davimgfx/SD-Projeto-Unidade-1/assets/118557337/6d54054d-4a22-45a3-8fcd-d68ccad1ff29)
+
+![Screenshot from 2024-04-26 10-59-10](https://github.com/davimgfx/SD-Projeto-Unidade-1/assets/118557337/8e54b85c-ff18-40f8-9b63-e51054b55cc5)
+
+- Após ao eureka server estiver rodando, rode primeiro o arquivo com nome **aplicacao-a-validacao-app** e espere iniciar, depois o **aplicacao-b-perfil-app** e espere iniciar, e por ultimo **isp-server-app** e espera inicar.
+
+![Screenshot from 2024-04-26 11-02-20](https://github.com/davimgfx/SD-Projeto-Unidade-1/assets/118557337/adee07c2-27cb-4420-8be3-aacce56257f5)
+
+![Screenshot from 2024-04-26 11-02-34](https://github.com/davimgfx/SD-Projeto-Unidade-1/assets/118557337/6fef30c0-7f6b-4a87-a1c2-49b2768fa8d8)
+
+![Screenshot from 2024-04-26 11-02-59](https://github.com/davimgfx/SD-Projeto-Unidade-1/assets/118557337/bf271cc0-883e-457d-8643-e134636ae6ec)
+
+- Por último, e não menos importante, rode o arquivo **dns-server-app-main** e espere iniciar
+
+![Screenshot from 2024-04-26 11-08-50](https://github.com/davimgfx/SD-Projeto-Unidade-1/assets/118557337/2d6179e6-10db-447b-bf64-2c4aeda695d8)
+
+- Com todos os arquivos rodando, é possível testar ele!!!
+
+
+
 ## Orientações
 
 • Deverá ser feito em equipe de no máximo três alunos
