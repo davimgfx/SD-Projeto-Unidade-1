@@ -29,7 +29,7 @@ Davi Fernandes Neves Costa
 - Todas as solicitações seram feitas através do isp, que esta na porta 8080
 - Para testar validação, terá que usar a porta http://localhost:8080/validate
 - Para testar os perfis, terá que usar a porta http://localhost:8080/profile
-- Todos emails válidos
+- Todos perfis válidos
 ```
   public PerfilController() {
         perfis.put("sampio@gmail.com", "Aluno");
@@ -39,7 +39,7 @@ Davi Fernandes Neves Costa
         perfis.put("ronaldo@ucsal.edu.br", "Professor");
     }
 ```
-- Todos perfis válidos
+- Todos emails válidos
 ```
     public ValidationController() {
         emailList.add("sampio@gmail.com");
