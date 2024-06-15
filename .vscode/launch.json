@@ -2,32 +2,55 @@
   "configurations": [
     {
       "type": "java",
-      "name": "Spring Boot-DnsServerAppMainApplication<dns-server-app-main>",
-      "request": "launch",
-      "cwd": "${workspaceFolder}",
-      "mainClass": "com.example.dnsserverappmain.DnsServerAppMainApplication",
-      "projectName": "dns-server-app-main",
-      "args": "",
-      "envFile": "${workspaceFolder}/.env",
-      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=42377 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=dns-server-app-main"
-    },
-    {
-      "type": "java",
       "name": "Spring Boot-EurekaServerAppMainApplication<eureka-server-app-main>",
       "request": "launch",
       "cwd": "${workspaceFolder}",
       "mainClass": "com.example.eurekaserverappmain.EurekaServerAppMainApplication",
       "projectName": "eureka-server-app-main",
       "args": "",
-      "envFile": "${workspaceFolder}/.env"
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=60558 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=eureka-server-app-main"
     },
     {
       "type": "java",
-      "name": "Spring Boot-IspServerAppApplication<isp-server-app>",
+      "name": "Spring Boot-DfsAplicacaoAMestreAppApplication<dfs-aplicacao-a-mestre-app>",
       "request": "launch",
       "cwd": "${workspaceFolder}",
-      "mainClass": "com.example.ispserverapp.IspServerAppApplication",
-      "projectName": "isp-server-app",
+      "mainClass": "com.example.dfs_aplicacao_a_mestre_app.DfsAplicacaoAMestreAppApplication",
+      "projectName": "dfs-aplicacao-a-mestre-app",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=60567 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=dfs-aplicacao-a-mestre-app"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-DfsAplicacaoBApplication<dfs-aplicacao-b>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.example.dfs_aplicacao_b.DfsAplicacaoBApplication",
+      "projectName": "dfs-aplicacao-b",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=60600 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=dfs-aplicacao-b"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-DfsAplicacaoCApplication<dfs-aplicacao-c>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.example.dfs_aplicacao_c.DfsAplicacaoCApplication",
+      "projectName": "dfs-aplicacao-c",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=60670 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=dfs-aplicacao-c"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-AplicacaoAValidacaoAppApplication<aplicacao-a-validacao-app>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.example.aplicacaoavalidacaoapp.AplicacaoAValidacaoAppApplication",
+      "projectName": "aplicacao-a-validacao-app",
       "args": "",
       "envFile": "${workspaceFolder}/.env"
     },
@@ -43,11 +66,21 @@
     },
     {
       "type": "java",
-      "name": "Spring Boot-AplicacaoAValidacaoAppApplication<aplicacao-a-validacao-app>",
+      "name": "Spring Boot-DnsServerAppMainApplication<dns-server-app-main>",
       "request": "launch",
       "cwd": "${workspaceFolder}",
-      "mainClass": "com.example.aplicacaoavalidacaoapp.AplicacaoAValidacaoAppApplication",
-      "projectName": "aplicacao-a-validacao-app",
+      "mainClass": "com.example.dnsserverappmain.DnsServerAppMainApplication",
+      "projectName": "dns-server-app-main",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-IspServerAppApplication<isp-server-app>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.example.ispserverapp.IspServerAppApplication",
+      "projectName": "isp-server-app",
       "args": "",
       "envFile": "${workspaceFolder}/.env"
     }

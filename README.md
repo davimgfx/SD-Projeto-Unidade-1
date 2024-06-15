@@ -3,6 +3,16 @@
 ## Aluno
 Davi Fernandes Neves Costa
 
+## Todas as Portas
+ISP - 8080
+DNS - 8081
+EUREKA - 8761
+VALIDACAO APLICAÇÃO B - 8181
+PERFIL APLICACAO A - 8182
+DFS APLICACAO A - 8281
+DFS APLICACAO B - 8282
+DFS APLICACAO C - 8283
+
 ## Como rodar o projeto
 - Baixa a extensão **Spring Boot Dashboard** no VsCode
 - Rode primeiro o **eureka-server-app-main**
