@@ -1,7 +1,7 @@
-package com.example.dfs_aplicacao_b.service;
+package com.example.dfs_aplicacao_c.service;
 
-import com.example.dfs_aplicacao_b.entity.FILE_DATA;
-import com.example.dfs_aplicacao_b.repository.FileDataRepository;
+import com.example.dfs_aplicacao_c.entity.FILE_DATA;
+import com.example.dfs_aplicacao_c.repository.FileDataRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -17,7 +17,7 @@ public class StorageService {
     @Autowired
     private FileDataRepository fileDataRepository;
 
-    private final String FOLDER_PATH = "C:/Users/ADM/Desktop/Files/AppB/";
+    private final String FOLDER_PATH = "C:/Users/ADM/Desktop/Files/AppC/";
 
     public String uploadFileToFileSystem(MultipartFile file) throws IOException {
         // Verifica se a pasta existe, caso contrário cria a pasta
@@ -50,3 +50,4 @@ public class StorageService {
         return null;
     }
 }
+
