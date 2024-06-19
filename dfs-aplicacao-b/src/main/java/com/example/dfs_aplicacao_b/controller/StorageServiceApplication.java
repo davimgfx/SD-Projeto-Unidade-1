@@ -14,29 +14,34 @@ import java.io.IOException;
 
 @SpringBootApplication
 @RestController
-@RequestMapping("/image")
-
+@RequestMapping("/file")
 public class StorageServiceApplication {
+
     @Autowired
-	private StorageService service;
+    private StorageService service;
 
-	@PostMapping("/fileSystem")
-	public ResponseEntity<?> uploadImageToFIleSystem(@RequestParam("image")MultipartFile file) throws IOException {
-		String uploadImage = service.uploadImageToFileSystem(file);
-		return ResponseEntity.status(HttpStatus.OK)
-				.body(uploadImage);
-	}
+    @PostMapping("/upload")
+    public ResponseEntity<?> uploadFileToFileSystem(@RequestParam("file") MultipartFile file) throws IOException {
+        String uploadMessage = service.uploadFileToFileSystem(file);
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(uploadMessage);
+    }
 
-	@GetMapping("/fileSystem/{fileName}")
-	public ResponseEntity<?> downloadImageFromFileSystem(@PathVariable String fileName) throws IOException {
-		byte[] imageData=service.downloadImageFromFileSystem(fileName);
-		return ResponseEntity.status(HttpStatus.OK)
-				.contentType(MediaType.valueOf("image/png"))
-				.body(imageData);
+    @GetMapping("/download/{fileName}")
+    public ResponseEntity<?> downloadFileFromFileSystem(@PathVariable String fileName) throws IOException {
+        byte[] fileData = service.downloadFileFromFileSystem(fileName);
+        if (fileData != null) {
+            return ResponseEntity.status(HttpStatus.OK)
+                    .contentType(MediaType.APPLICATION_OCTET_STREAM)
+                    .header("Content-Disposition", "attachment; filename=\"" + fileName + "\"")
+                    .body(fileData);
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body("File not found");
+        }
+    }
 
-	}
-
-	public static void main(String[] args) {
-		SpringApplication.run(StorageServiceApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(StorageServiceApplication.class, args);
+    }
 }
