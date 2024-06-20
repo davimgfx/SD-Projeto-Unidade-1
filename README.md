@@ -28,55 +28,45 @@ OBS: Mesmo não funcionando os end-points (get/post), o **Eureka Server reconhec
 ## Como rodar o projeto
 - Baixa a extensão **Spring Boot Dashboard** no VsCode
 - Rode primeiro o **eureka-server-app-main**
+  
+![Screenshot_1](https://github.com/davimgfx/SD-Projeto-Unidade-2/assets/118557337/a65798e3-8829-4519-b945-f59e82107f98)
 
-![Screenshot from 2024-04-26 10-57-25](https://github.com/davimgfx/SD-Projeto-Unidade-1/assets/118557337/6d54054d-4a22-45a3-8fcd-d68ccad1ff29)
-
-![Screenshot from 2024-04-26 10-59-10](https://github.com/davimgfx/SD-Projeto-Unidade-1/assets/118557337/8e54b85c-ff18-40f8-9b63-e51054b55cc5)
-
-- Após ao eureka server estiver rodando, rode primeiro o arquivo com nome **aplicacao-a-validacao-app** e espere iniciar, depois o **aplicacao-b-perfil-app** e espere iniciar, e por ultimo **isp-server-app** e espera inicar.
-
-![Screenshot from 2024-04-26 11-02-20](https://github.com/davimgfx/SD-Projeto-Unidade-1/assets/118557337/adee07c2-27cb-4420-8be3-aacce56257f5)
-
-![Screenshot from 2024-04-26 11-02-34](https://github.com/davimgfx/SD-Projeto-Unidade-1/assets/118557337/6fef30c0-7f6b-4a87-a1c2-49b2768fa8d8)
-
-![Screenshot from 2024-04-26 11-02-59](https://github.com/davimgfx/SD-Projeto-Unidade-1/assets/118557337/bf271cc0-883e-457d-8643-e134636ae6ec)
-
-- Por último, e não menos importante, rode o arquivo **dns-server-app-main** e espere iniciar
-
-![Screenshot from 2024-04-26 11-08-50](https://github.com/davimgfx/SD-Projeto-Unidade-1/assets/118557337/2d6179e6-10db-447b-bf64-2c4aeda695d8)
+- Agora rode todos os outros serviçoes
+  
+![Screenshot_2](https://github.com/davimgfx/SD-Projeto-Unidade-2/assets/118557337/5388789b-4427-498d-9545-0df19601eb96)
 
 - Com todos os arquivos rodando, é possível testar ele!!!
 
+![Screenshot_3](https://github.com/davimgfx/SD-Projeto-Unidade-2/assets/118557337/2561a410-3e49-4f67-b717-5828e2269297)
+
+
 ## Como testar o Projeto
-- Todas as solicitações seram feitas através do isp, que esta na porta 8080
-- Para testar validação, terá que usar a porta http://localhost:8080/validate
-- Para testar os perfis, terá que usar a porta http://localhost:8080/profile
-- Todos perfis válidos
+- Configure no arquivos **DFS APLICACAO B** e **DFS APLICACAÇÃO C** onde é a rota para que os arquivos sejam guardados 
 ```
-  public PerfilController() {
-        perfis.put("sampio@gmail.com", "Aluno");
-        perfis.put("exemplo@hotmail.com", "Professor");
-        perfis.put("usuario123@yahoo.com", "Funcionário");
-        perfis.put("jose@email.com", "Aluno");
-        perfis.put("ronaldo@ucsal.edu.br", "Professor");
-    }
+|- dfs-aplicacao-b
+ |- src
+  |- main
+    |- java\com\example\dfs-aplicacao-b
+      |- service
+        |- StoregeService.java
+            // ALTERE PARA O LOCAL DESEJADO
+             private final String FOLDER_PATH = "C:/Users/ADM/Desktop/Files/AppB/";
 ```
-- Todos emails válidos
 ```
-    public ValidationController() {
-        emailList.add("sampio@gmail.com");
-        emailList.add("exemplo@hotmail.com");
-        emailList.add("usuario123@yahoo.com");
-        emailList.add("jose@email.com");
-        emailList.add("ronaldo@ucsal.edu.br");
-    }
+|- dfs-aplicacao-c
+ |- src
+  |- main
+    |- java\com\example\dfs-aplicacao-c
+      |- service
+        |- StoregeService.java
+            // ALTERE PARA O LOCAL DESEJADO
+             private final String FOLDER_PATH = "C:/Users/ADM/Desktop/Files/AppC/";
 ```
-  
-![Screenshot from 2024-04-26 11-30-27](https://github.com/davimgfx/SD-Projeto-Unidade-1/assets/118557337/b45a4d71-8076-457b-99bc-5d242af56179)
+![Screenshot_6](https://github.com/davimgfx/SD-Projeto-Unidade-2/assets/118557337/e657c366-fc6a-4ea3-8bab-87e71cfcf9eb)
 
-![Screenshot from 2024-04-26 11-31-36](https://github.com/davimgfx/SD-Projeto-Unidade-1/assets/118557337/27e35221-c3f8-47bf-aaf6-70b665559e2f)
+![Screenshot_7](https://github.com/davimgfx/SD-Projeto-Unidade-2/assets/118557337/adbfb89f-39fb-4c8d-98a9-05ed2839f7c0)
 
-![Screenshot from 2024-04-26 11-33-03](https://github.com/davimgfx/SD-Projeto-Unidade-1/assets/118557337/e57abfbd-6027-42f7-b037-1d24400ba236)
+![Screenshot_4](https://github.com/davimgfx/SD-Projeto-Unidade-2/assets/118557337/c2ab1811-db76-47f8-8097-143c19aa4645)
 
-
+![Screenshot_5](https://github.com/davimgfx/SD-Projeto-Unidade-2/assets/118557337/c1a644f0-8cc3-454b-b078-6a195d14c550)
 
